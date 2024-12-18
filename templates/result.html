@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Result</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Your Result</h1>
+      <div class="card text-center">
+        <div class="card-body">
+          <h2 class="card-title">
+            You got <strong>{{ correct_count }}</strong> out of 10 questions
+            correct.
+          </h2>
+          <h3 class="card-subtitle mb-2 text-muted">Feedback</h3>
+          <p class="card-text" style="color: {{ result_color }}">{{ feedback }}</p>
+          <a href="{{ url_for('index') }}" class="btn btn-secondary"
+            >Go to Dashboard</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

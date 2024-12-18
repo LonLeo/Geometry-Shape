@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to custom CSS -->
+    <title>Take Test</title>
+    <style>
+      body {
+        background-color: #f8f9fa; /* Light background color */
+      }
+      .container {
+        background-color: #ffffff; /* White background for the form */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 20px; /* Padding around the content */
+      }
+      h1 {
+        color: #343a40; /* Darker text color */
+      }
+      .question {
+        margin-bottom: 15px; /* Space between questions */
+        padding: 10px; /* Padding around each question */
+        border: 1px solid #dee2e6; /* Light border */
+        border-radius: 5px; /* Rounded corners for questions */
+        background-color: #f1f1f1; /* Light gray background for questions */
+      }
+      .btn-submit {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: white; /* White text */
+      }
+      .btn-submit:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Take the Test</h1>
+      <form method="POST" action="{{ url_for('take_test') }}">
+        {% for question in questions %}
+        <div class="question">
+          <p><strong>{{ question.question_text[0] }}</strong></p>
+          <input
+            type="hidden"
+            name="correct_answers"
+            value="{{ question.answer_area[0] }}"
+          />
+          <input
+            type="text"
+            name="answers"
+            class="form-control"
+            required
+            placeholder="Your answer"
+          />
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-submit btn-block">
+          Submit Answers
+        </button>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

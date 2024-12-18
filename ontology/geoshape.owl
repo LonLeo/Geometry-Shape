@@ -1,0 +1,2662 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#"
+     xml:base="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape">
+        <rdfs:comment xml:lang="en">It is an ontology that is of the geometric shapes( Rectangle, Square, Triangle) and it&apos;s properties (area). In addition, it includes levels of student interaction, questions, and feedback, for education purposes.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasFeedback -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasFeedback">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <rdfs:comment xml:lang="en">Links a student to his/her feedback.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasQuestion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasQuestion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <rdfs:comment xml:lang="en">It relates a student to the questions they came with.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasQuestionLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasQuestionLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Level"/>
+        <rdfs:comment xml:lang="en">It defines the relation of question and its level.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasResult">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Result"/>
+        <rdfs:comment xml:lang="en">Relates a student to their result.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasStudentLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#hasStudentLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Level"/>
+        <rdfs:comment xml:lang="en">Links students to their level.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#answer_area -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#answer_area">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Stores the area of geometry shape for questions.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#area_of_rectangle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#area_of_rectangle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Rectangle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Store the areas of respective shapes.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#area_of_square -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#area_of_square">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Square"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Store the areas of respective shapes.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#area_of_triangle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#area_of_triangle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Triangle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Store the areas of respective shapes.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_level">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Stores the level of feedback (integer).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_message -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_message">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the message content of the feedback.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_level">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Stores the level of a question (integer).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_text -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_text">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the question text.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#student_level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#student_level">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Stores the student’s level (integer).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#student_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#student_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Stores the student’s name.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks">
+        <rdfs:comment xml:lang="en">Represents feedback.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#GeometricShapes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#GeometricShapes">
+        <rdfs:comment xml:lang="en">A general class for geometric shapes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Level -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Level">
+        <rdfs:comment xml:lang="en">Represents a level (likely of students or questions).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions">
+        <rdfs:comment xml:lang="en">Represents questions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Rectangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Rectangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#GeometricShapes"/>
+        <rdfs:comment xml:lang="en">Subclasses of Shapes, representing Rectangle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Result -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Result">
+        <rdfs:comment xml:lang="en">Represents the result of students.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Square -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Square">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#GeometricShapes"/>
+        <rdfs:comment xml:lang="en">Subclasses of Shapes, representing square.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students">
+        <rdfs:comment xml:lang="en">Represents students.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Triangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Triangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#GeometricShapes"/>
+        <rdfs:comment xml:lang="en">Subclasses of Shapes, representing Triangle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</feedback_level>
+        <feedback_message>It’s a tough start, but don’t lose heart! Focus on the basics and try again.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</feedback_level>
+        <feedback_message>Outstanding! Perfect score—you’ve mastered this topic brilliantly!</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</feedback_level>
+        <feedback_message>A small step forward! Identify the tricky areas and give them extra attention.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</feedback_level>
+        <feedback_message>You’re getting there! With some more practice, you’ll see significant improvement.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</feedback_level>
+        <feedback_message>Almost at the pass mark! Keep up the effort, and you’ll cross the line next time.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</feedback_level>
+        <feedback_message>Good job passing! Let’s aim higher next time by focusing on the details.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</feedback_level>
+        <feedback_message>You’re improving steadily! A bit more focus, and you’ll achieve even more.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</feedback_level>
+        <feedback_message>Well done! Your understanding is solid—keep up the great work.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</feedback_level>
+        <feedback_message>Impressive performance! You’re just steps away from achieving perfection.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#feedback_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Feedbacks"/>
+        <feedback_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</feedback_level>
+        <feedback_message>Excellent work! Almost full marks—just a little more polish needed.</feedback_message>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a square with side length 4?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 16 and height 6?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 15 and height 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_102 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_102">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a rectangle with length 3 and width 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_103 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_103">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a square with side length 4?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_104 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_104">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 12 and width 19?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_105 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_105">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">117</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a triangle with base 18 and height 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_106 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_106">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a triangle with base 9 and height 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_107 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_107">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a triangle with base 3 and height 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_108 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_108">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a rectangle with length 6 and width 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_109 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_109">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a rectangle with length 15 and width 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a square with side length 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_110 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_110">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 9?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_111 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_111">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 5 and width 16?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_112 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_112">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a triangle with base 15 and height 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_113 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_113">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a rectangle with length 3 and width 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_114 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_114">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 12 and height 19?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_115 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_115">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a rectangle with length 1 and width 4?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_116">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">255</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a rectangle with length 17 and width 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_117 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_117">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a triangle with base 1 and height 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_118 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_118">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a triangle with base 13 and height 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_119 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_119">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a square with side length 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a triangle with base 14 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_120 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_120">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a triangle with base 8 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_121 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_121">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a square with side length 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_122 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_122">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 13 and height 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_123 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_123">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">144</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_124 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_124">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">127</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 15 and height 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_125 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_125">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a triangle with base 11 and height 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_126 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_126">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 10?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_127 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_127">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a triangle with base 2 and height 16?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_128 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_128">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a triangle with base 8 and height 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_129 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_129">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a rectangle with length 11 and width 6?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a triangle with base 7 and height 2?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_130 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_130">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a square with side length 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_131 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_131">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a square with side length 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_132 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_132">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a square with side length 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_133 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_133">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a square with side length 9?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_134 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_134">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">144</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_135 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_135">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_136 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_136">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a triangle with base 12 and height 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_137 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_137">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a rectangle with length 12 and width 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_138 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_138">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a rectangle with length 16 and width 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_139 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_139">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a square with side length 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a rectangle with length 18 and width 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_140 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_140">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a rectangle with length 4 and width 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_141 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_141">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">247</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a rectangle with length 19 and width 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_142 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_142">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 16 and height 6?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_143 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_143">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a triangle with base 20 and height 4?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_144 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_144">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">238</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a rectangle with length 17 and width 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_145 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_145">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a square with side length 2?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_146 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_146">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a square with side length 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_147 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_147">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">208</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a rectangle with length 16 and width 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_148 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_148">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">156</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a rectangle with length 13 and width 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_149 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_149">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 9?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_150 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_150">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a rectangle with length 12 and width 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_151 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_151">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a triangle with base 20 and height 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_152 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_152">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a square with side length 6?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_153 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_153">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_154 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_154">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a rectangle with length 5 and width 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_155 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_155">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 1 and height 19?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_156 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_156">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 3 and width 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_157 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_157">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a square with side length 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_158 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_158">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a rectangle with length 1 and width 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_159 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_159">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">142</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a triangle with base 19 and height 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a rectangle with length 2 and width 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_160 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_160">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a square with side length 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_161 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_161">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 5 and height 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_162 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_162">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a triangle with base 6 and height 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_163 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_163">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 19 and width 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_164 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_164">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a rectangle with length 6 and width 2?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_165 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_165">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a square with side length 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_166 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_166">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 17 and height 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_167 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_167">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">342</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a rectangle with length 19 and width 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_168 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_168">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a rectangle with length 2 and width 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_169 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_169">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a triangle with base 11 and height 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a rectangle with length 8 and width 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_170 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_170">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">162</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a rectangle with length 9 and width 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_171 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_171">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a square with side length 10?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_172 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_172">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 14 and height 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_173 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_173">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 14 and height 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_174 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_174">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">361</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 19?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_175 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_175">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a triangle with base 16 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_176 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_176">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a triangle with base 4 and height 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_177 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_177">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a triangle with base 5 and height 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_178 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_178">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a square with side length 4?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_179 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_179">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 5 and height 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 4 and height 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_180 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_180">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a square with side length 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_181 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_181">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">361</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a square with side length 19?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_182 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_182">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 17 and height 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_183 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_183">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">152</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a rectangle with length 8 and width 19?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_184 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_184">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a triangle with base 5 and height 19?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_185 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_185">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a square with side length 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_186 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_186">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">220</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a rectangle with length 20 and width 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_187 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_187">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 6?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_188 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_188">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_189 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_189">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a rectangle with length 12 and width 9?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a rectangle with length 3 and width 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_190 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_190">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a square with side length 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_191 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_191">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a rectangle with length 13 and width 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_192 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_192">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a rectangle with length 8 and width 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_193 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_193">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a rectangle with length 4 and width 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_194 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_194">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a square with side length 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_195 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_195">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 5 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_196 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_196">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_197 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_197">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">238</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a rectangle with length 17 and width 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_198 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_198">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_199 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_199">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a square with side length 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 1 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a triangle with base 15 and height 10?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">153</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a triangle with base 17 and height 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">144</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a square with side length 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 9?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a square with side length 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a rectangle with length 2 and width 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a triangle with base 13 and height 16?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 5 and height 2?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 4 and width 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a rectangle with length 17 and width 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a triangle with base 17 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a rectangle with length 13 and width 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 1 and height 6?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a triangle with base 20 and height 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a rectangle with length 13 and width 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a rectangle with length 17 and width 10?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a triangle with base 14 and height 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">144</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a rectangle with length 12 and width 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_39">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 6 and width 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a square with side length 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_41">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a triangle with base 14 and height 2?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">126</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 9 and width 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_43">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a square with side length 10?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a square with side length 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_46">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a triangle with base 5 and height 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_47">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 17 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a square with side length 11?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_49">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a rectangle with length 3 and width 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 3 and height 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a rectangle with length 20 and width 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_51">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_52 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_52">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 4?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a square with side length 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_54 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_54">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a rectangle with length 5 and width 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a rectangle with length 16 and width 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_57 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_57">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 7 and width 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_58 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_58">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 2?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_59 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_59">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 1 and height 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a triangle with base 1 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a triangle with base 9 and height 16?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_61 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_61">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 10 and height 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_62 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_62">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a square with side length 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a square with side length 5?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_64">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a square with side length 18?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a rectangle with length 4 and width 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_66">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a square with side length 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_67 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_67">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a rectangle with length 4 and width 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_68 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_68">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a rectangle with length 8 and width 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_69 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_69">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a triangle with base 13 and height 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</question_level>
+        <question_text>What is the area of a triangle with base 12 and height 9?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">144</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a square with side length 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_71 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_71">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 1 and height 16?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a rectangle with length 8 and width 9?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_73 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_73">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a rectangle with length 19 and width 6?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_74 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_74">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a rectangle with length 1 and width 8?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_75">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 6?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_76 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_76">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_77 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_77">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</question_level>
+        <question_text>What is the area of a square with side length 4?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_78 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_78">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">288</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a rectangle with length 18 and width 16?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_79 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_79">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">117</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a triangle with base 18 and height 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a square with side length 9?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a triangle with base 2 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a rectangle with length 11 and width 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_82 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_82">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a triangle with base 3 and height 17?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_83 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_83">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a square with side length 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a square with side length 2?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_85 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_85">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">169</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</question_level>
+        <question_text>What is the area of a square with side length 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</question_level>
+        <question_text>What is the area of a triangle with base 15 and height 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_87 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_87">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a rectangle with length 14 and width 14?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_88 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_88">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a square with side length 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_89 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_89">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</question_level>
+        <question_text>What is the area of a square with side length 20?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 6 and height 12?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_90 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_90">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 14 and height 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_91 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_91">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</question_level>
+        <question_text>What is the area of a rectangle with length 20 and width 10?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_92 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_92">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a triangle with base 12 and height 7?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</question_level>
+        <question_text>What is the area of a rectangle with length 14 and width 1?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">156</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a rectangle with length 12 and width 13?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_95 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_95">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</question_level>
+        <question_text>What is the area of a triangle with base 19 and height 3?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_96 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_96">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 2?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_97 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_97">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a triangle with base 15 and height 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_98 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_98">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">361</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</question_level>
+        <question_text>What is the area of a square with side length 19?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_99 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#question_99">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Questions"/>
+        <answer_area rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</answer_area>
+        <question_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</question_level>
+        <question_text>What is the area of a rectangle with length 3 and width 15?</question_text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#rectangle_formula -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#rectangle_formula">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Rectangle"/>
+        <area_of_rectangle>1/2*width*height</area_of_rectangle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#square_formula -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#square_formula">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Square"/>
+        <area_of_square>length*length</area_of_square>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#student_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#student_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <student_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</student_level>
+        <student_name>XYZ XYZ</student_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#student_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#student_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <student_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</student_level>
+        <student_name>ABS ABC</student_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#triangle_formula -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#triangle_formula">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Triangle"/>
+        <area_of_triangle>1/2*width*height</area_of_triangle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Sameer%20Gurung -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Sameer%20Gurung">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
+        <student_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_level>
+        <student_name>Sameer Gurung</student_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Rectangle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Square"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Triangle"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

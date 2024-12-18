@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: >-
+  Development of an Intelligent Tutoring System for Geometry
+  Learning Using Ontology and Python
+message: 'If you use this code, please cite it as follows:'
+type: software
+authors:
+  - family-names: Gurung
+    given-names: Sameer
+    email: lonleo997@gmail.com
+repository-code: 'https://github.com/LonLeo/GeoShape'
+abstract: >-
+  This project focuses on developing an Intelligent Tutoring
+  System (ITS) for geometry learning, leveraging Python for
+  implementation and ontology for domain knowledge
+  representation. The system calculates areas of geometric
+  shapes such as squares, rectangles, and triangles while
+  supporting an interactive learning process.
+keywords:
+  - Intelligent Tutoring System
+  - Geometry Learning
+  - Python
+  - Ontology
+  - Software Development
+  - basic
+license: MIT
+version: 1.0.0
+date-released: '2024-12-16'
