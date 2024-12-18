@@ -2628,16 +2628,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Sameer%20Gurung -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Sameer%20Gurung">
-        <rdf:type rdf:resource="http://www.semanticweb.org/samba/ontologies/2024/11/geoshape#Students"/>
-        <student_level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_level>
-        <student_name>Sameer Gurung</student_name>
-    </owl:NamedIndividual>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
